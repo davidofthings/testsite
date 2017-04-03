@@ -1,0 +1,72 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import 'bootstrap-sprockets';
+ @import 'bootstrap';
+
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+
+ // Navbar font color and hover.
+ .navbar-default .navbar-brand,
+ .navbar-default .navbar-nav > li > a  {
+  //  font-family: 'Quicksand', sans-serif;
+   color: #1A201F;
+   font-weight: 700;
+   font-size: 20px;
+   &:hover {
+     color: #1A201F;
+     opacity: 0.5;
+   }
+ }
+ .navbar-default .navbar-toggle .icon-bar {
+   background-color: black;
+ }
+
+ // Centering Height of List.
+ .navbar-default .navbar-nav > li {
+   margin-top: 10px;
+ }
+ .navbar-default .navbar-toggle {
+   margin-top: 20px;
+   border: 2px solid #1A201F;
+   &:hover, &:focus {
+     background-color: #ECF5F0;
+   }
+ }
+
+ // Navbar Styles.
+ .navbar {
+   border: none;
+   padding-top: 15px;
+   padding-bottom: 10px;
+   color: white;;
+ }
+ /* Collapsing Navbar Styles */
+
+ @media(min-width:768px) {
+   .navbar-default {
+     -webkit-transition: all .35s;
+     -moz-transition: all .35s;
+     transition: all .35s;
+     padding: 10px 0;
+     /* Add additional styles here for the UNCOLLAPSED state */
+   }
+   .navbar-default.affix {
+     padding: 0;
+     /* Add additional styles here for the COLLAPSED state */
+   }
+ }
